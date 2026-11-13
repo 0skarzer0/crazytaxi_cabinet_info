@@ -52,6 +52,17 @@ Hay una [propuesta de estándar](https://github.com/0skarzer0/naomi-kit/blob/mai
 Un caso real que condiciona el diseño: la hija del propietario juega a OutRun con el acelerador siempre pisado, así que
 «acelerador + botón» no vale para cambiar de vista; por eso se usa START + palanca.
 
+## Consecuencias para los juegos
+
+- **Volante absoluto** → perfecto para juegos con volante o potenciómetro. Para spinner o dial (rotación infinita) hay
+  que convertir la posición del volante en velocidad de giro (lo hace mame4all-naomi en Super Sprint).
+- **Mucho recorrido para un juego de consola:** en Mario Kart 64 se multiplicó el giro por 2,5 alrededor del centro
+  (la dirección a tope al 40 % del recorrido) porque había que girar demasiado (dc2naomi, perfil de mandos `mk64`).
+- **Palanca de 2 posiciones con retorno** → se usa como cambio LOW/HIGH con enclavamiento por software
+  (adelante = HIGH, atrás = LOW), o como dos botones (Mario Kart 64: adelante = salto/derrape, atrás = objeto). Los
+  juegos con H de 4/6 velocidades quedan peor.
+- **Solo un jugador** con controles de coche; un segundo jugador no tiene mandos.
+
 ## Lo que no se ha medido
 
 - Las **luces** del botón START y de otros botones (se sabe que START tiene luz, no se ha probado a encenderla desde un
